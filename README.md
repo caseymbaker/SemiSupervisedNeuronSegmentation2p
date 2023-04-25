@@ -7,7 +7,7 @@ CUDA compatible GPU, Anaconda
 
 ### Install Pipeline
 
-1) Download repository and save to easily identifiable directory - e.g. *C:/Users/{username}/Documents/segmentation* 
+1) Download repository and save to easily identifiable directory - e.g. *C:/Users/{username}/Documents/SemiSupervisedNeuronSegmentation-main\SemiSupervisedNeuronSegmentation-main* 
 
 2) Open Anaconda prompt and type:  
 
