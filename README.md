@@ -13,7 +13,7 @@ CUDA compatible GPU, Anaconda
 
         cd segmentation_directory
         cd installation
-        conda env create -f environment_suns.yml -n SSLseg 
+        conda env create -f environment_suns.yml -n suns 
         
   this uses Tensorflow V1, for Tensorflow V2, use environment_suns_tf2.yml
   
@@ -32,7 +32,7 @@ CUDA compatible GPU, Anaconda
         cd segmentation_directory
         cd demo
         cd train_1_test_9
-        conda activate SSLseg
+        conda activate suns
         runABO.bat
 
 ### Pipeline Output
