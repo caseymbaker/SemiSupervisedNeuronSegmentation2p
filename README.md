@@ -1,5 +1,7 @@
 # Semi-Supervised Deep Learning for Neuron Segmentation with Fewer Ground Truth Labels
 
+We adapted the code from <https://github.com/YijunBao/Shallow-UNet-Neuron-Segmentation_SUNS>, see that page for more details on incorporating your own data into the pipeline
+
 Requirements: 
 CUDA compatible GPU, Anaconda
 
