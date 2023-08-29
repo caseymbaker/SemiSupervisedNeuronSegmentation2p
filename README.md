@@ -1,9 +1,13 @@
 # Semi-Supervised Deep Learning for Neuron Segmentation with Fewer Ground Truth Labels
 
-We adapted the code from <https://github.com/YijunBao/Shallow-UNet-Neuron-Segmentation_SUNS>, see that page for more details on incorporating your own data into the pipeline
-
 Requirements: 
-CUDA compatible GPU, Anaconda
+Memory: ~6x file size of the raw video if the the raw video is in uint16 format. ~3x file size of the raw video if the the raw video is in float32 format.
+
+A CUDA compatible GPU is preferred.
+
+Anaconda
+
+We adapted the code from <https://github.com/YijunBao/Shallow-UNet-Neuron-Segmentation_SUNS>
 
 ## Demo on ABO 175 Data:
 
@@ -15,11 +19,11 @@ CUDA compatible GPU, Anaconda
 
         cd segmentation_directory
         cd installation
-        conda env create -f environment_suns.yml -n suns 
-        
-  this uses Tensorflow V1, for Tensorflow V2, use environment_suns_tf2.yml
-  
-3) Go to the Anaconda environment folder, (e.g., C:/ProgramData/Anaconda3/envs or C:/Users/{username}/.conda/envs), and then go to folder `suns/Lib/site-packages/fissa`, overwrite core.py with the files provided in the installation folder. The modified files increase speed by eliminating redundant separate or separation_prep during initializating an Experiment object, and enable videos whose size are larger than 4 GB after converting to float32. If neither of them is important to you, then you can skip replacing the files. If you see a lot of text output when activating suns environment and do not want to see them, you can go to the Anaconda environment folder, go to folder `suns/etc/conda/activate.d`, and delete the two files under this folder. 
+        conda env create -f environment_sand.yml -n sand 
+
+use _tf2 version for tensorflow2
+          
+3) Go to the Anaconda environment folder, (e.g., C:/ProgramData/Anaconda3/envs or C:/Users/{username}/.conda/envs), and then go to folder `sand/Lib/site-packages/fissa`, overwrite core.py with the files provided in the installation folder. The modified files increase speed by eliminating redundant separate or separation_prep during initializating an Experiment object, and enable videos whose size are larger than 4 GB after converting to float32. If neither of them is important to you, then you can skip replacing the files. If you see a lot of text output when activating suns environment and do not want to see them, you can go to the Anaconda environment folder, go to folder `sand/etc/conda/activate.d`, and delete the two files under this folder. 
 
 ### Download ABO Data
 
@@ -34,7 +38,7 @@ CUDA compatible GPU, Anaconda
         cd segmentation_directory
         cd demo
         cd train_1_test_9
-        conda activate suns
+        conda activate sand
         runABO.bat
 
 ### Pipeline Output
